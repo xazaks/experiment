@@ -27,6 +27,7 @@ body{
 input{
     display: block;
     margin-right: 20px;
+    outline: 0px;
 }
 
 div{
