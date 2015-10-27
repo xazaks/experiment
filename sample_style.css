@@ -19,9 +19,13 @@ li{
 }
 
 body{
-    background-color: #212117;
+    background-image: url("streamworkshop.jpg")
 }
 
 input{
     display: block
+}
+
+div{
+    background-color: #212117;
 }
