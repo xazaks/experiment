@@ -19,6 +19,7 @@ li{
 }
 
 body{
+    background-position: bottom; 
     background-image: url("steamworkshop.jpg");
     background-color: #212117;
 }
