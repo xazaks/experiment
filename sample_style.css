@@ -24,7 +24,7 @@ body{
 }
 
 input{
-    display: block
+    display: block;
 }
 
 div{
@@ -36,6 +36,6 @@ div{
 }
 
 .notransparency{
-    opacity: 1;
+    opacity: 1.0;
     filter: alpha(opacity=100);
 }
