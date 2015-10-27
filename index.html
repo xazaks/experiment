@@ -5,23 +5,26 @@
     </head>
     <body>
         <div class="transparency">
-            <span class="text">
+            <form method="post">
+            <span class="text center">
                 Welcome
             </span>
-        <ul class="text notransparency">
-            <li>
-                <span>Username:</span>
-                <input class="inputs">
-            </li>
-            <li>
-                <span>Password:</span>
-                <input class="inputs">
-            </li>
-            <li>
-                <span>Retype Password:</span>
-                <input class="inputs">
-            </li>
-        </ul>
-            </div>
-</body>
+            <ul class="text">
+                <li>
+                    <label for="username">Username:</label>
+                    <input type="text" class="inputs" name="username">
+                </li>
+                <li>
+                    <label for="password">Password:</label>
+                    <input type="password" class="inputs" name="password">
+                </li>
+                <li>
+                    <label for="retype">Retype Password:</label>
+                    <input type="password" class="inputs" name="retype">
+                </li>
+            </ul>
+                <input type="submit" value="Register">
+            </form>
+        </div>
+    </body>
 </html>
