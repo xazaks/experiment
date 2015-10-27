@@ -34,3 +34,8 @@ div{
     opacity: 0.6;
     filter: alpha(opacity=60);
 }
+
+.notransparency{
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
