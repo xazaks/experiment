@@ -4,35 +4,41 @@
         <link rel="stylesheet" type="text/css" href="sample_style.css">
     </head>
     <body>
+        <div class="topbar">
+        <div id="register">
+                <span class="text">
+                    Register
+                </span>
+            </div>
+            <div id="login">
+                <span class="text">
+                    Login
+                </span>
+            </div>
+        </div>
         <div class="box">
             <div class="gradient header">
                 <h3 class="text center shadow">
-                Welcome
-            </h3>
+                    Welcome
+                </h3>
             </div>
             <form action="register.php" method="post">
-            <ul class="text">
-                <li>
-                    <label for="username">Username:</label>
-                    <input type="text" autocomplete="off" class="inputs transparency" name="username">
-                </li>
-                <li>
-                    <label for="password">Password:</label>
-                    <input type="password" class="inputs transparency" name="password">
-                </li>
-                <li>
-                    <label for="retype">Retype Password:</label>
-                    <input type="password" class="inputs transparency" name="retype">
-                </li>
-            </ul>
+                <ul class="text">
+                    <li>
+                        <label for="username">Username:</label>
+                        <input type="text" autocomplete="off" class="inputs transparency" name="username">
+                    </li>
+                    <li>
+                        <label for="password">Password:</label>
+                        <input type="password" class="inputs transparency" name="password">
+                    </li>
+                    <li>
+                        <label for="retype">Retype Password:</label>
+                        <input type="password" class="inputs transparency" name="retype">
+                    </li>
+                </ul>
                 <input type="submit" value="Register">
             </form>
-            <div id="register" margin-left="10">
-                Register
-            </div>
-            <div id="login" margin-right="-10">
-                Login
-            </div>
         </div>
     </body>
 </html>
