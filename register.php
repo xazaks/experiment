@@ -7,7 +7,6 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 $retype = $_POST['retype'];
 
-# Send data to database
 if ($username == '' or $password == '' or $retype == '') {
     echo 'All fields must be filled in order to register <br/>';
     exit();
@@ -17,7 +16,7 @@ if ($password !== $retype) {
     exit();
 }
 $database = new PDO('mysql:host=localhost;dbname=userdata', 'root', '');
-//$database->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$database->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $user_existance = "SELECT COUNT(*) AS count FROM users WHERE Username = :username";
 $prepare_user_existance_querry = $database->prepare($user_existance);
 $prepare_user_existance_querry->execute(array(':username' => $username));
@@ -34,7 +33,11 @@ try {
 } catch (PDOException $exception) {
     echo $exception->getMessage();
 }
+
+echo 'We will remember you!';
+
 # Print data
+/*
 var_dump($username);
 print_r("<br/>");
 var_dump($password);
@@ -44,3 +47,4 @@ var_dump($database);
 echo '<pre>', print_r(array(
     'get' => $_GET,
     'post' => $_POST), true), '</pre>';
+*/
