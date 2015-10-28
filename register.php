@@ -1,19 +1,22 @@
 <?php
 
 error_reporting(-1);
+require_once 'functions.php';
+session_start();
 
 # Get values of variables
 $username = $_POST['username'];
 $password = $_POST['password'];
 $retype = $_POST['retype'];
 
+
 if ($username == '' or $password == '' or $retype == '') {
-    echo 'All fields must be filled in order to register <br/>';
-    exit();
+    addFlashMessage('All fields must be filled in order to register <br/>');
+    redirect("index.php");
 }
 if ($password !== $retype) {
-    echo 'Provided passwords have to be identical <br/>';
-    exit();
+    addFlashMessage('Provided passwords have to be identical <br/>');
+    redirect("index.php");
 }
 $database = new PDO('mysql:host=localhost;dbname=userdata', 'root', '');
 $database->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -23,8 +26,8 @@ $prepare_user_existance_querry->execute(array(':username' => $username));
 $existance = $prepare_user_existance_querry->fetchObject()->count;
 
 if ($existance != 0) {
-    echo 'You are known here, no need to introduce again. <br/>';
-    exit();
+    addFlashMessage('You are known here, no need to introduce again. <br/>');
+    redirect("index.php");
 }
 try {
     $adduser = "INSERT INTO users (Username, Password) VALUES (:username,:password)";
@@ -34,7 +37,8 @@ try {
     echo $exception->getMessage();
 }
 
-echo 'We will remember you!';
+addFlashMessage('We will remember you!');
+redirect("index.php");
 
 # Print data
 /*

@@ -1,3 +1,8 @@
+<?php
+require_once 'functions.php';
+session_start();
+$message = getFlashMessage();
+?>
 <html>
     <head>
         <title>eXpeRimenT</title>
@@ -5,7 +10,7 @@
     </head>
     <body>
         <div class="topbar">
-        <div id="register">
+            <div id="register">
                 <span class="text">
                     Register
                 </span>
@@ -16,7 +21,14 @@
                 </span>
             </div>
         </div>
-        <div class="box">
+        <?php if (!empty($message)): ?>
+            <div id="msg" class="box text">
+                <span>
+                    <?php echo $message ?>
+                </span>
+            </div>
+        <?php endif; ?>
+        <div class="box login-box">
             <div class="gradient header">
                 <h3 class="text center shadow">
                     Welcome

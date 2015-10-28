@@ -40,7 +40,7 @@ input{
     padding-left: 5px;
 }
 
-.box{
+/*.box{
     overflow: hidden;
     background-color: rgba(33, 33, 23, 0.8);
     width: 250px;
@@ -48,6 +48,28 @@ input{
     border-radius: 25px;
     margin: auto;
     margin-top: 300px;
+    position: relative;
+}*/
+
+.login-box{
+    width: 250px;
+    margin-top: 300px;
+}
+
+#msg{
+    margin-top: 10px;
+    padding: 10px;
+    width: 50%;
+    
+}
+
+.box{
+    overflow: hidden;
+    background-color: rgba(33, 33, 23, 0.8);
+    border: 1px solid #A3A375;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
 }
 
