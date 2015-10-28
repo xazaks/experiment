@@ -83,7 +83,7 @@ label{
 
 #register{
     float: left;
-    left: 50px;
+    margin-top: 50px;
     width: 124px;
     height: 50px;
     border-top: 1px dashed rgba(163, 163, 117,0.5);
@@ -91,7 +91,7 @@ label{
 
 #login{
     float: right;
-    right: 50px;
+    margin-top: 50px;
     width: 124px;
     height: 50px;
     border-top: 1px dashed rgba(163, 163, 117,0.5);
@@ -108,10 +108,12 @@ span{
     overflow: hidden;
     background-color: rgba(33, 33, 23, 0.8);
     width: 250px;
+    height: 100px;
     border-bottom: 1px solid #A3A375;
-    border-left: 1px dashed #A3A375;
-    border-right: 1px dashed #A3A375;
-    border-radius: 25px;
+    border-left: 1px solid #A3A375;
+    border-right: 1px solid #A3A375;
+    border-radius: 0px 0px 25px 25px;
     margin: auto;
+    margin-top: -50px;
     position: relative; 
 }
