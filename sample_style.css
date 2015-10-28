@@ -25,29 +25,32 @@ body{
     background-color: #212117;
 }
 
+.transparency{
+    opacity: 0.6;
+    filter: alpha(opacity=60); 
+}
+
 input{
     display: block;
     margin-right: 20px;
     margin-top: 2px;
     margin-bottom: 8px;
+    border-radius: 5px;
     outline: 0px;
+    padding-left: 5px;
 }
 
-div{
-    background-color: #212117;
+.box{
+    overflow: hidden;
+    background-color: rgba(33, 33, 23, 0.8);
     width: 250px;
     border: 1px solid #A3A375;
+    border-radius: 25px;
     margin: auto;
     margin-top: 300px;
-    padding-top: 10px;
 }
 
-.transparency{
-    opacity: 0.9;
-    filter: alpha(opacity=90);
-}
-
-span{
+h3{
     font-weight: bold;
 }
 
@@ -59,4 +62,20 @@ span{
 
 label{
     font-weight: bold;
+}
+
+.header{
+    width: 250px;
+    height: 20px;
+    border-bottom: 1px solid rgba(163, 163, 117,0.5);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.gradient{
+    background: linear-gradient(rgba(255,255,255,0.1), rgba(0,0,0,0.3));
+}
+
+.shadow{
+    text-shadow: 1px 1px 2px rgb(00,00,00), -1px -1px 0px rgba(255,255,255,0.3);
 }
