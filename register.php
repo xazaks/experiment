@@ -1,8 +1,5 @@
 <?php
-
-error_reporting(-1);
-require_once 'functions.php';
-session_start();
+require_once 'bootstrap.php';
 
 # Get values of variables
 $username = $_POST['username'];
@@ -10,7 +7,7 @@ $password = $_POST['password'];
 $retype = $_POST['retype'];
 
 
-if ($username == '' or $password == '' or $retype == '') {
+if ($username == '' || $password == '' || $retype == '') {
     addFlashMessage('All fields must be filled in order to register <br/>');
     redirect("index.php");
 }
@@ -18,12 +15,8 @@ if ($password !== $retype) {
     addFlashMessage('Provided passwords have to be identical <br/>');
     redirect("index.php");
 }
-$database = new PDO('mysql:host=localhost;dbname=userdata', 'root', '');
-$database->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-$user_existance = "SELECT COUNT(*) AS count FROM users WHERE Username = :username";
-$prepare_user_existance_querry = $database->prepare($user_existance);
-$prepare_user_existance_querry->execute(array(':username' => $username));
-$existance = $prepare_user_existance_querry->fetchObject()->count;
+
+$existance = userExistance($username);
 
 if ($existance != 0) {
     addFlashMessage('You are known here, no need to introduce again. <br/>');

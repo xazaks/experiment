@@ -6,13 +6,18 @@
     color:#A3A375;
 }
 
-.text{
+.text, a{
     color:#A3A375;
+}
+
+a{
+    text-decoration: none;
 }
 
 .center{
     margin: auto;
     display: table;
+    vertical-align: middle;
 }
 
 li{
@@ -67,15 +72,15 @@ input{
     overflow: hidden;
     background-color: rgba(33, 33, 23, 0.8);
     border: 1px solid #A3A375;
-    border-radius: 25px;
+    border-radius: 20px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
 }
 
-h3{
+/*h3{
     font-weight: bold;
-}
+}*/
 
 [type="submit"]{
     margin: auto;
@@ -100,7 +105,7 @@ label{
 }
 
 .shadow{
-    text-shadow: 1px 1px 2px rgb(00,00,00), -1px -1px 0px rgba(255,255,255,0.3);
+    text-shadow: 1px 1px 1px rgb(00,00,00), -1px -1px 0px rgba(255,255,255,0.3);
 }
 
 #register{
@@ -119,7 +124,7 @@ label{
     border-top: 1px dashed rgba(163, 163, 117,0.5);
 }
 
-span{
+.align{
     margin-top: 15px;
     display: table;
     margin-left: auto;
