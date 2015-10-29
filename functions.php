@@ -17,8 +17,6 @@ function redirect($place) {
 
 function render($template, array $vars = array()) {
     extract($vars);
-    $message;
-    $page_content;
     ob_start();
     include $template;
     return ob_get_clean();

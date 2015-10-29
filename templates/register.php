@@ -4,7 +4,7 @@
             Welcome
         </span>
     </div>
-    <form action="register.php" method="post">
+    <form action="process_register.php" method="post">
         <ul class="text">
             <li>
                 <label for="username">Username:</label>

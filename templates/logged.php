@@ -1,0 +1,1 @@
+<?php //tabela z uzytkownikami /?>
