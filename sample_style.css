@@ -1,4 +1,4 @@
-.inputs, [type="submit"]{
+.border{
     border-style: solid;
     border-width:1px;
     background-color: #2E2E1F;
@@ -27,7 +27,10 @@ li{
 body{
     background-position: bottom; 
     background-image: url("steamworkshop.jpg");
-    background-color: #212117;
+    background-color: #212117;  
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .transparency{
@@ -45,16 +48,6 @@ input{
     padding-left: 5px;
 }
 
-/*.box{
-    overflow: hidden;
-    background-color: rgba(33, 33, 23, 0.8);
-    width: 250px;
-    border: 1px solid #A3A375;
-    border-radius: 25px;
-    margin: auto;
-    margin-top: 300px;
-    position: relative;
-}*/
 
 .login-box{
     width: 250px;
@@ -78,14 +71,17 @@ input{
     position: relative;
 }
 
-/*h3{
-    font-weight: bold;
-}*/
-
-[type="submit"]{
+.button{
     margin: auto;
     margin-bottom: 10px;
     font-weight: bold;
+    box-shadow: 0px 2px 4px 1px rgba(163, 163, 117,0.3) inset;
+}
+
+.button:hover { 
+    text-shadow: 0px 1px 5px rgba(163, 163, 117, 0.7);
+    font-size: large;
+    font-weight: normal;
 }
 
 label{

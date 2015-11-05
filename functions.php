@@ -5,6 +5,9 @@ function addFlashMessage($msg) {
 }
 
 function getFlashMessage() {
+    if (!isset($_SESSION["message"])) {
+        return '';
+    }
     $message = $_SESSION["message"];
     $_SESSION["message"] = '';
     return $message;
@@ -15,6 +18,19 @@ function redirect($place) {
     exit();
 }
 
+function isLoggedIn()
+{
+    return $_SESSION['logged'];
+}
+
+/**
+ * 
+ * @param bool $state
+ */
+function setLoggedIn($state)
+{
+    $_SESSION['logged'] = $state;
+}
 function render($template, array $vars = array()) {
     extract($vars);
     ob_start();

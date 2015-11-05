@@ -25,6 +25,7 @@ try {
         addFlashMessage("Your account wasn't activated yet.");
         redirect("login.php");
     } else {
+        setLoggedIn(true);
         redirect("logged.php");
     }
 } catch (PDOException $exception) {

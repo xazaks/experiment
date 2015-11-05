@@ -32,16 +32,3 @@ try {
 
 addFlashMessage('We will remember you!');
 redirect("index.php");
-
-# Print data
-/*
-var_dump($username);
-print_r("<br/>");
-var_dump($password);
-print_r("<br/>");
-var_dump($database);
-
-echo '<pre>', print_r(array(
-    'get' => $_GET,
-    'post' => $_POST), true), '</pre>';
-*/

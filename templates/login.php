@@ -8,13 +8,13 @@
         <ul class="text">
             <li>
                 <label for="username">Username:</label>
-                <input type="text" autocomplete="off" class="inputs transparency" name="username">
+                <input type="text" autocomplete="off" class="background-color border transparency" name="username">
             </li>
             <li>
                 <label for="password">Password:</label>
-                <input type="password" class="inputs transparency" name="password">
+                <input type="password" class="background-color border transparency" name="password">
             </li>
         </ul>
-        <input type="submit" value="Login">
+        <input class="button border" type="submit" value="Login">
     </form>
 </div>
