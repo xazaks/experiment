@@ -23,10 +23,6 @@ function isLoggedIn()
     return $_SESSION['logged'];
 }
 
-/**
- * 
- * @param bool $state
- */
 function setLoggedIn($state)
 {
     $_SESSION['logged'] = $state;

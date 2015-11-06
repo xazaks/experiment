@@ -48,7 +48,6 @@ input{
     padding-left: 5px;
 }
 
-
 .login-box{
     width: 250px;
     margin-top: 300px;
@@ -56,7 +55,6 @@ input{
 
 #msg{
     margin-top: 10px;
-    padding: 10px;
     width: 50%;
     
 }
@@ -69,6 +67,7 @@ input{
     margin-left: auto;
     margin-right: auto;
     position: relative;
+    box-shadow: 0px 0px 1px 1px rgba(255,255,255,0.25); 
 }
 
 .button{
@@ -84,12 +83,11 @@ input{
     font-weight: normal;
 }
 
-label{
+label, #close{
     font-weight: bold;
 }
 
 .header{
-    width: 250px;
     height: 20px;
     border-bottom: 1px solid rgba(163, 163, 117,0.5);
     padding-top: 5px;
@@ -97,7 +95,7 @@ label{
 }
 
 .gradient{
-    background: linear-gradient(rgba(255,255,255,0.1), rgba(0,0,0,0.4));
+    background: linear-gradient(rgba(255,255,255,0.20) 25%, rgba(0,0,0,0.75) 75%) rgba(97,65,38,0.75);
 }
 
 .shadow{
@@ -139,4 +137,19 @@ label{
     margin: auto;
     margin-top: -50px;
     position: relative; 
+}
+
+html{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-shadow: 1px 1px 5px rgba(0,0,0,1);
+}
+
+#close{
+    margin: auto;
+    margin-right: 20px;
+    display: table;
+    background: none;
+    border: none;
+    outline: 0px;
 }

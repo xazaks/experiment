@@ -19,8 +19,13 @@
             </div>
         </div>
         <?php if (!empty($message)): ?>
-            <div id="msg" class="box text">
-                <span class="align">
+            <div id="msg" class="box">
+                <div class="gradient header">
+                    <button id="close" class="text shadow">
+                        X
+                    </button>
+                </div>
+                <span class="align text">
                     <?php echo $message ?>
                 </span>
             </div>
